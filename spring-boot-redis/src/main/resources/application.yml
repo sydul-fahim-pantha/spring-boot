@@ -1,0 +1,7 @@
+spring:
+  redis:
+    host: localhost
+    password: ""
+    pool:
+      min-idle: 1
+      max-active: 2
