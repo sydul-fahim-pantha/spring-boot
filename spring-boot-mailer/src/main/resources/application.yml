@@ -1,0 +1,13 @@
+spring:
+  mail:
+    host: smtp.gmail.com 
+    port: 465
+    username: noreply@test.com
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+    
