@@ -1,10 +1,10 @@
-package sfp.spring.boot.jmx.controller;
+package sfp.spring.boot.jmx.mbean.exporter;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class JmxExposer {
+@RestController("/con1")
+public class SampleController {
 
 	public static final int DEFAULT_SPITTLES_PER_PAGE = 25;
 	private int spittlesPerPage = DEFAULT_SPITTLES_PER_PAGE;
