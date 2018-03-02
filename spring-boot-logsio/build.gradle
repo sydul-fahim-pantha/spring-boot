@@ -1,0 +1,37 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.10.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'sfp.boot'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web') {
+     	exclude group: 'org.springframework.boot', module:'spring-boot-starter-logging'
+  	}
+  	compile('org.springframework.boot:spring-boot-starter-log4j2')
+	compile('io.logz.log4j2:logzio-log4j2-appender:1.0.7')
+	// compile('io.logz.logback:logzio-logback-appender:1.0.17')
+	 
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	
+}
