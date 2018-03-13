@@ -1,0 +1,1 @@
+The purpose of this project is to check various config of "server.tomcat" for a spring boot project.

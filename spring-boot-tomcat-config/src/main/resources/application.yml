@@ -1,0 +1,4 @@
+server:
+  tomcat:
+    accept-count: 2
+    max-connections: 5
